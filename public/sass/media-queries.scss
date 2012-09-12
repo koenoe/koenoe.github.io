@@ -1,0 +1,50 @@
+@media screen and (max-width:1024px) {
+	
+	#container {
+		width: 924px;
+	}
+	
+}
+
+@media screen and (max-width:960px) {
+	
+	#container {
+		width: 860px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	
+	#container {
+		width: 90%;
+		text-align: center;
+		
+		header{
+ 
+			#logo {
+				float: none;
+				margin: 0 0 45px 0;
+				
+				h1,h2 {
+					margin: 0;
+				}
+					
+			}
+			
+			#socialmedia {
+				float: none;
+				margin: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:480px) and (orientation:landscape) {
+	#container {
+			
+		header {
+			margin-top: 10%;
+		}
+	}
+}
+
