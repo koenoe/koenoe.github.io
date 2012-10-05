@@ -66,7 +66,7 @@ body {
 		#socialmedia {
 			position: relative;
 			float: right;
-			width: 250px;
+			width: 335px;
 			
 			a {
 				$experimental-support-for-svg: true;
@@ -112,6 +112,9 @@ body {
 					}
 					&.lastfm { 
 						@include icons-sprite(lastfm);
+					}
+					&.five00px { 
+						@include icons-sprite(five00px);
 					}
 					&.phone { 
 						@include icons-sprite(phone);
