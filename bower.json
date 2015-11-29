@@ -1,0 +1,12 @@
+{
+  "name": "koenromers.com",
+  "homepage": "http://koenromers.com",
+  "authors": [
+    "Koen Romers <info@koenromers.com>"
+  ],
+  "description": "",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
