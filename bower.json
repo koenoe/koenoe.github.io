@@ -5,8 +5,17 @@
     "Koen Romers <info@koenromers.com>"
   ],
   "description": "",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "fontawesome#~4.5.0"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "**/*.{eot,svg,ttf,woff,woff2}",
+        "scss/font-awesome.scss"
+      ]
+    }
   }
 }

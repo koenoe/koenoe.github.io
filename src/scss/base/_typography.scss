@@ -1,0 +1,11 @@
+body {
+	@include body-font;
+}
+
+h1 {
+	@include heading-font;
+}
+
+h2 {
+	@include subheading-font;
+}
