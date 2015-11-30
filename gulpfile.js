@@ -8,6 +8,7 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	inject = require('gulp-inject'),
 	livereload = require('gulp-livereload'),
+	minifyCss = require('gulp-minify-css'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
 	series = require('stream-series'),
@@ -64,6 +65,7 @@ gulp.task('css', ['css:clean'], function() {
 		.on('error', sass.logError)
 		.pipe(autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
 		.pipe(concat('styles.css'))
+		.pipe(minifyCss({compatibility: 'ie9'}))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest(paths.dest + 'css'));
 });
@@ -93,6 +95,7 @@ gulp.task('html:clean', function(cb) {
 });
 gulp.task('html', ['html:clean'], function() {
 	return gulp.src(paths.html + '*.html')
+		.pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
 		.pipe(gulp.dest(paths.dest));
 });
 
