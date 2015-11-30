@@ -108,7 +108,9 @@ gulp.task('inject', ['css','js','html'], function () {
 // Deploy
 gulp.task('deploy', function() {
 	return gulp.src(paths.dest + '**/*')
-		.pipe(ghPages());
+		.pipe(ghPages({
+			branch: 'master'
+		}));
 });
 
 gulp.task('watch', function() {
