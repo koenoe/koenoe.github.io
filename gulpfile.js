@@ -12,6 +12,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
 	series = require('stream-series'),
+	smoosher = require('gulp-smoosher'),
 	uglify = require('gulp-uglify'),
 	watch = require('gulp-watch');
 
@@ -107,6 +108,11 @@ gulp.task('inject', ['css','js','html'], function () {
 	return target.pipe(inject(sources, injectParams.options))
 		.pipe(gulp.dest(paths.dest));
 });
+gulp.task('smoosher', ['inject'], function () {
+	return gulp.src(paths.dest + injectParams.file)
+		.pipe(smoosher({ base: paths.dest }))
+		.pipe(gulp.dest(paths.dest));
+});
 
 // Deploy
 gulp.task('deploy', function() {
@@ -129,4 +135,4 @@ gulp.task('watch', function() {
 	});
 });
 
-gulp.task('default', ['img','fonts','inject','watch']);
+gulp.task('default', ['img','fonts','smoosher','watch']);
