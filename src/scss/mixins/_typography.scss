@@ -1,8 +1,8 @@
 @mixin body-font {
 	font-family: $font-serif;
 	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.7;
+	font-size: 21px;
+	line-height: 1.5;
 }
 
 @mixin heading-font {
@@ -15,7 +15,7 @@
 @mixin subheading-font {
 	font-family: $font-serif;
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 38px;
 	font-style: italic;
 	line-height: 1;
 }

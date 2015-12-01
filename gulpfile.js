@@ -130,7 +130,7 @@ gulp.task('watch', function() {
 		};
 
 		gulp.watch([paths.js + '**/*.js', './bower_components/' + '**/*.js'], ['js']);
-		gulp.watch([paths.scss + '**/*.scss'], ['css']);
+		gulp.watch([paths.scss + '**/*.scss'], ['smoosher']);
 		gulp.watch([paths.html + '*.html'], ['html']);
 	});
 });
