@@ -1,0 +1,19 @@
+{
+    "sourcePaths": {
+        "js": "./src/js/",
+        "scss": "./src/scss/",
+        "img": "./src/img/",
+        "html": "./src/"
+    },
+    "destinationPath": "./dist/",
+    "loadPaths": ["./src/scss/","./bower_components/font-awesome/scss/"],
+    "inject": "index.html",
+    "cloudflare": {
+        "token": "",
+        "email": "",
+        "domain": "koenromers.com"
+    },
+    "githubPages": {
+        "branch": "master"
+    }
+}
