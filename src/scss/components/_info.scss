@@ -1,8 +1,9 @@
 .info {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
 	font-size: 16px;
+	height: $footer-height;
+	line-height: $footer-height;
+	text-align: right;
+	padding: 0 15px;
 
 	a {
 		color: rgba(#000, 0.6);
