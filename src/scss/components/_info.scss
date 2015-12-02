@@ -1,13 +1,17 @@
 .info {
 	position: absolute;
 	bottom: 20px;
-	right: 0;
+	right: 20px;
 	font-size: 16px;
 
 	a {
 		color: rgba(#000, 0.6);
 		text-decoration: none;
 		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
 
 		i {
 			margin-right: 8px;

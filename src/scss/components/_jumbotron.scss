@@ -16,7 +16,7 @@
 		margin-right: 5px;
 	}
 
-	@media (max-width: 768px) {
-		width: 90%;
+	@media (max-width: $mobile-breakpoint) {
+		width: 100%;
 	}
 }
