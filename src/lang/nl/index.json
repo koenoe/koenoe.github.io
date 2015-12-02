@@ -3,13 +3,10 @@
     "description": "Een full-stack developer gevestigd in Rotterdam. Een liefhebber van mooie, onderhoudbare code met een scherp oog voor detail.",
     "h1": "Koen Romers",
     "h2": "Freelance developer",
-    "text": "Een full-stack developer gevestigd in Rotterdam. Een liefhebber van mooie, onderhoudbare code met een scherp oog voor detail.",
+    "text": "Een full-stack developer gevestigd in Rotterdam. Een liefhebber van mooie, onderhoudbare code met een scherp oog voor detail.<br>Meer dan 10 jaar professionele ervaring; fulltime beschikbaar.",
     "source": "Broncode",
     "language": {
         "link": "/en/",
         "label": "English?"
-    },
-    "pagespeed": {
-        "link": "koenromers.com/nl/"
     }
 }
