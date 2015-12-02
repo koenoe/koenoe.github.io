@@ -19,6 +19,10 @@ a {
 		transition: all 0.25s ease-out;
 	}
 
+	i {
+		margin-right: 8px;
+	}
+
 	&:hover span {
 		border-color: transparent;
 	}

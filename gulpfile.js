@@ -141,8 +141,8 @@ gulp.task('watch', function() {
 		};
 
 		gulp.watch([config.sourcePaths.js + '**/*.js', './bower_components/' + '**/*.js'], ['js']);
-		gulp.watch([config.sourcePaths.scss + '**/*.scss'], ['smoosher']);
-		gulp.watch([config.sourcePaths.html + '*.html'], ['html']);
+		gulp.watch([config.sourcePaths.scss + '**/*.scss'], ['css']);
+		gulp.watch([config.sourcePaths.html + '*.html'], ['translate']);
 	});
 });
 
