@@ -102,7 +102,7 @@ gulp.task('inject', ['css','js','html'], function() {
 gulp.task('translate:build', ['inject'], function() {
 	return gulp.src(config.destinationInject, {base: config.destinationPath})
 		.pipe(i18n({
-			langDir: './lang',
+			langDir: config.sourcePaths.lang,
 			createLangDirs: true
 		}))
 		.pipe(gulp.dest(config.destinationPath));

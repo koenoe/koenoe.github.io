@@ -3,10 +3,11 @@
         "js": "./src/js/",
         "scss": "./src/scss/",
         "img": "./src/img/",
-        "html": "./src/"
+        "html": "./src/",
+        "lang": "./src/lang/"
     },
     "destinationPath": "./dist/",
-    "destinationInject": ["./dist/nl/index.html","./dist/en/index.html"],
+    "destinationInject": ["./dist/index.html"],
     "loadPaths": ["./src/scss/","./bower_components/font-awesome/scss/"],
     "cloudflare": {
         "token": "",
