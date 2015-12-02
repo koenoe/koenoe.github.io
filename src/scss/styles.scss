@@ -1,12 +1,15 @@
 // Google fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900);
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic);
 
 // Variables
 @import 'variables';
 
+// Icons
+@import 'icons';
+
 // 3rd libraries
-@import 'font-awesome';
+// @import 'font-awesome';
 
 // Mixins
 @import 'mixins/typography';

@@ -62,8 +62,12 @@ gulp.task('css', ['css:clean'], function() {
 gulp.task('fonts:clean', function(cb) {
 	return del([config.destinationPath + 'fonts/**/*'], cb);
 });
-gulp.task('fonts', ['fonts:clean'], function(){
+gulp.task('fonts:lib', ['fonts:clean'], function(){
 	return gulp.src(bower('**/*.{eot,svg,ttf,woff,woff2}'))
+		.pipe(gulp.dest(config.destinationPath + 'fonts'));
+});
+gulp.task('fonts', ['fonts:lib'], function(){
+	return gulp.src(config.sourcePaths.fonts + '**/*.{eot,svg,ttf,woff,woff2}')
 		.pipe(gulp.dest(config.destinationPath + 'fonts'));
 });
 

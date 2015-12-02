@@ -3,6 +3,7 @@
         "js": "./src/js/",
         "scss": "./src/scss/",
         "img": "./src/img/",
+        "fonts": "./src/fonts/",
         "html": "./src/",
         "lang": "./src/lang/"
     },
