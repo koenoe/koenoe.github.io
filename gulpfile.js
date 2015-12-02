@@ -99,7 +99,7 @@ gulp.task('inject', ['css','js','html'], function() {
 });
 
 // Translate html
-gulp.task('translate', ['inject'], function() {
+gulp.task('translate:build', ['inject'], function() {
 	return gulp.src(config.destinationInject, {base: config.destinationPath})
 		.pipe(i18n({
 			langDir: './lang',
@@ -107,9 +107,9 @@ gulp.task('translate', ['inject'], function() {
 		}))
 		.pipe(gulp.dest(config.destinationPath));
 });
-// gulp.task('translate', ['translate:build'], function(cb) {
-// 	return del([config.destinationPath + '*.html'], cb);
-// });
+gulp.task('translate', ['translate:build'], function(cb) {
+	return del([config.destinationPath + '*.html'], cb);
+});
 
 // Deploy
 gulp.task('fetch-google-analytics', function() {
