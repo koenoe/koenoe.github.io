@@ -8,5 +8,8 @@
     "language": {
         "link": "/en/",
         "label": "English?"
+    },
+    "pagespeed": {
+        "link": "koenromers.com/nl/"
     }
 }
