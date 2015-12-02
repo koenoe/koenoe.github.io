@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	download = require('gulp-download'),
 	ghPages = require('gulp-gh-pages'),
 	htmlmin = require('gulp-htmlmin'),
+	i18n = require('gulp-html-i18n'),
 	imagemin = require('gulp-imagemin'),
 	inject = require('gulp-inject'),
 	livereload = require('gulp-livereload'),
@@ -19,11 +20,6 @@ var gulp = require('gulp'),
 	watch = require('gulp-watch');
 
 var config = require('./gulpconfig.json');
-
-var injectParams = {
-	file: config.inject,
-	options: {relative: true, read: false}
-};
 
 // Scripts
 gulp.task('js:clean', function(cb) {
@@ -83,7 +79,7 @@ gulp.task('img', ['img:clean'], function() {
 
 // Html
 gulp.task('html:clean', function(cb) {
-	return del([config.destinationPath + '*.html'], cb);
+	return del([config.destinationPath + '**/*.html'], cb);
 });
 gulp.task('html', ['html:clean'], function() {
 	return gulp.src(config.sourcePaths.html + '*.html')
@@ -92,18 +88,28 @@ gulp.task('html', ['html:clean'], function() {
 });
 
 // Inject
-gulp.task('inject', ['css','js','html'], function () {
-	var target = gulp.src(config.destinationPath + injectParams.file),
+gulp.task('inject', ['css','js','html'], function() {
+	var target = gulp.src(config.destinationInject, {base: config.destinationPath}),
 		sources = gulp.src([config.destinationPath + '**/*.css', config.destinationPath + '**/*.js'], {read: false});
 
-	return target.pipe(inject(sources, injectParams.options))
+	return target
+		.pipe(inject(sources, {relative: true, read: false}))
+		.pipe(smoosher())
 		.pipe(gulp.dest(config.destinationPath));
 });
-gulp.task('smoosher', ['inject'], function () {
-	return gulp.src(config.destinationPath + injectParams.file)
-		.pipe(smoosher({ base: config.destinationPath }))
+
+// Translate html
+gulp.task('translate', ['inject'], function() {
+	return gulp.src(config.destinationInject, {base: config.destinationPath})
+		.pipe(i18n({
+			langDir: './lang',
+			createLangDirs: true
+		}))
 		.pipe(gulp.dest(config.destinationPath));
 });
+// gulp.task('translate', ['translate:build'], function(cb) {
+// 	return del([config.destinationPath + '*.html'], cb);
+// });
 
 // Deploy
 gulp.task('fetch-google-analytics', function() {
@@ -126,6 +132,7 @@ gulp.task('deploy', ['purge-cache-cloudflare','fetch-google-analytics'], functio
 		}));
 });
 
+// Watch
 gulp.task('watch', function() {
 	// Listen on port 35729
 	livereload.listen(35729, function (err) {
@@ -139,4 +146,5 @@ gulp.task('watch', function() {
 	});
 });
 
-gulp.task('default', ['img','fonts','smoosher','watch']);
+// Default
+gulp.task('default', ['img','fonts','translate','watch']);

@@ -24,6 +24,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-download": "0.0.1",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-html-i18n": "^0.2.3",
     "gulp-htmlmin": "^1.2.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-inject": "^3.0.0",

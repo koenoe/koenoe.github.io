@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
 body {
@@ -14,12 +14,12 @@ body {
 }
 
 .wrapper {
-    min-height: 100%;
-    margin-bottom: $footer-height * -1;
+	min-height: 100%;
+	margin-bottom: $footer-height * -1;
 
-    &:after {
-        content: "";
-        display: block;
-        height: $footer-height;
-    }
+	&:after {
+		content: "";
+		display: block;
+		height: $footer-height;
+	}
 }

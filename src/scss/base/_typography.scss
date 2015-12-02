@@ -9,3 +9,17 @@ h1 {
 h2 {
 	@include subheading-font;
 }
+
+a {
+	color: rgba(#000, 0.6);
+	text-decoration: none;
+
+	span {
+		border-bottom: 1px solid rgba(#000, 0.2);
+		transition: all 0.25s ease-out;
+	}
+
+	&:hover span {
+		border-color: transparent;
+	}
+}

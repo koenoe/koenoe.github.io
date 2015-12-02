@@ -6,8 +6,8 @@
         "html": "./src/"
     },
     "destinationPath": "./dist/",
+    "destinationInject": ["./dist/nl/index.html","./dist/en/index.html"],
     "loadPaths": ["./src/scss/","./bower_components/font-awesome/scss/"],
-    "inject": "index.html",
     "cloudflare": {
         "token": "",
         "email": "",
