@@ -106,6 +106,10 @@ gulp.task('smoosher', ['inject'], function () {
 });
 
 // Deploy
+gulp.task('fetch-google-analytics', function() {
+	return download('https://www.google-analytics.com/analytics.js')
+    	.pipe(gulp.dest(config.destinationPath + 'js'));
+});
 gulp.task('purge-cache-cloudflare', function() {
 	var options = {
 		token: config.cloudflare.token,
@@ -115,7 +119,7 @@ gulp.task('purge-cache-cloudflare', function() {
 
 	cloudflare(options);
 });
-gulp.task('deploy', ['purge-cache-cloudflare'], function() {
+gulp.task('deploy', ['purge-cache-cloudflare','fetch-google-analytics'], function() {
 	return gulp.src(config.destinationPath + '**/*')
 		.pipe(ghPages({
 			branch: 'master'
