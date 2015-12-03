@@ -118,7 +118,7 @@ gulp.task('translate', ['translate:build'], function(cb) {
 // Deploy
 gulp.task('fetch-google-analytics', function() {
 	return download('https://www.google-analytics.com/analytics.js')
-    	.pipe(gulp.dest(config.destinationPath + 'js'));
+		.pipe(gulp.dest(config.destinationPath + 'js'));
 });
 gulp.task('purge-cache-cloudflare', function() {
 	var options = {
@@ -145,7 +145,7 @@ gulp.task('watch', function() {
 		};
 
 		gulp.watch([config.sourcePaths.js + '**/*.js', './bower_components/' + '**/*.js'], ['js']);
-		gulp.watch([config.sourcePaths.scss + '**/*.scss'], ['css']);
+		gulp.watch([config.sourcePaths.scss + '**/*.scss'], ['translate']);
 		gulp.watch([config.sourcePaths.html + '*.html'], ['translate']);
 	});
 });
