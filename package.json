@@ -1,41 +1,18 @@
 {
   "name": "koenromers.com",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/koenoe/koenromers-com.git"
-  },
+  "repository": "git+https://github.com/koenoe/koenromers-com.git",
   "author": "Koen Romers <info@koenromers.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/koenoe/koenromers-com/issues"
   },
   "homepage": "https://github.com/koenoe/koenromers-com#readme",
-  "devDependencies": {
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cloudflare": "^0.1.3",
-    "gulp-concat": "^2.6.0",
-    "gulp-download": "0.0.1",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-html-i18n": "^0.2.3",
-    "gulp-htmlmin": "^1.2.0",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-inject": "^3.0.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-minify-css": "^1.2.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.0",
-    "gulp-smoosher": "0.0.8",
-    "gulp-uglify": "^1.4.2",
-    "gulp-watch": "^4.3.5",
-    "main-bower-files": "^2.9.0",
-    "stream-series": "^0.1.1"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
